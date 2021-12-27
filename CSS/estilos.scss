@@ -1,0 +1,794 @@
+
+@font-face {
+    font-family: wildyarial;
+    src: url("../Fuentes/Wildy_SansFB.otf");
+}
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: #E7E3D8 !important;    
+}
+
+/*Variables*/
+
+$color-fondo:#E7E3D8;
+$color-principal:#f2cc7d;
+$color-secundario:#CECABE;
+$color-principal-transparente: rgba(242, 204, 125, 0.5);
+$fuente-textos:'Zen Kurenaido', Arial;
+$fuente-titulos:wildyarial, Arial;
+
+
+/*Estilos Header*/
+
+.menu-navegacion {
+    background-color: $color-fondo;
+    font-family: $fuente-titulos;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 60px;
+    margin: 3px;
+    .logo-img {
+        height: 55px;
+    }
+}
+
+.submenu-navegacion {
+    height: 120px;
+    background-image: url("../Fotos/condiments-prepare-italian-pasta.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    .enlaces-nav {
+        font-family: $fuente-titulos;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        background-color: rgba(0, 0, 0, 0.5);
+        .links-head {
+            color: $color-fondo;
+            text-decoration: none;
+            border: none;
+            width: 100%;
+            text-align: center;
+        }
+        .links-head:hover {
+            background: $color-principal;
+            color:black;
+        }
+    }
+    .slogan {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        .titulo-home {
+            color: $color-fondo;
+            font-family: $fuente-titulos;
+            font-weight: 200;
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+}
+
+/*Estilos footer*/
+
+.contenedor-footer {
+    height: 300px;
+    background-image: url(../Fotos/pasta-footer.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 100px;
+    padding-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "enlaces-footer logo-footer redes-footer"
+    "derechos-footer derechos-footer derechos-footer";
+    justify-content: center;
+    align-content: flex-start;
+    padding: 20px;
+    margin-top: 50px;
+    .enlaces-footer {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        justify-content: center;
+        grid-area: enlaces-footer;
+        .links-footer{
+            color: $color-fondo;
+            text-decoration: none;
+            font-family: $fuente-titulos;
+            font-size: 15px;
+        }
+        .links-footer:hover {
+            color:$color-principal;
+        }
+    }
+    .cont-logo {
+        display: flex;
+        justify-content: center;
+        grid-area: logo-footer;
+        .logo-footer {
+            height: 70px;
+            justify-self: center;
+        }
+    }
+    .contenedor-iconosredes {
+        display: grid;
+        grid-template-columns: 22px 22px;
+        grid-template-rows: 22px 22px 22px;
+        justify-content: end;
+        grid-gap: 10px;
+        .icono-redes {
+            height: 20px;
+            transition: transform 0.5s;
+        }
+        .icono-redes:hover {
+            transform:scale(1.5);
+        }
+    }
+    .derechos-benvenuti {
+        width: 100%;
+        grid-area: derechos-footer;
+        justify-self: center;
+        color: $color-fondo;
+        font-size: 10px;
+        text-align: center;
+        padding-top: 30px;
+    }
+}
+
+/*Sección Home*/
+
+.cuerpo-home {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .titulo-slogan{
+        height: auto;
+        background: $color-principal;
+        border-radius: 15px;
+        color:black;
+        font-family: $fuente-titulos;
+        font-size: 25px;
+        font-weight: 600;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .texto-home {
+        text-align: center;
+        font-family: $fuente-textos;
+        margin-bottom: 0px;
+    }
+}
+
+.contenedor-carrusel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    .icono-pasta {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+.contenedor-recetas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    .icono-pasta {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .titulo-slogan{
+        height: auto;
+        background: $color-principal;
+        border-radius: 15px;
+        color:black;
+        font-family: $fuente-titulos;
+        font-size: 25px;
+        font-weight: 600;
+        padding: 5px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .receta-pomodoro, .receta-carbonara, .receta-ravioli, .receta-tiramisu {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        color:black;
+        font-family: $fuente-textos;
+        .contenedor-detalle {
+            width: 100%;
+            background: $color-secundario;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            .titulo-receta {
+                font-family: $fuente-titulos;
+                text-align: center;
+                font-size: 25px;
+                font-weight: 600;  
+            }
+            .punto-detalle {
+                margin-bottom: 0px;
+            }
+        }
+    }
+        .contenedor-pasos {
+            width: 100%;
+            background: $color-secundario;
+            border-radius: 15px;
+            padding: 20px;
+            padding-bottom: 0px;
+            .titulo-pasos {
+                font-family: $fuente-titulos;
+                text-align: center;
+                font-size: 25px;
+                font-weight: 500;
+            }
+            .pasos-receta{
+                padding-bottom: 10px;
+            }
+
+        }
+}
+
+/*Sección Nosotros*/  
+
+.contenedor-nosotros {
+    background-image: url(../Fotos/food-with-ingredients.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: $color-fondo;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .fotos-historia {
+        display: none;
+    }
+    .historia-texto {
+        .titulo-nosotros {
+        font-family: $fuente-titulos;
+        font-weight: 500;
+        font-size: 25px;
+        }
+        .icono-nosotros {
+        height: 30px;
+        width: 30px;
+        margin-bottom: 16px;
+        }
+        .texto-nosotros {
+        font-family: $fuente-textos;
+        font-size: 15px;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding:5px;
+        }
+    }
+}
+
+/*Sección Locales*/
+
+.contenedor-locales {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    .locales-izquierda {
+        margin-bottom: 20px;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        background-color:$color-principal;
+        grid-template-areas:
+        "titulo direccion"
+        "imagen imagen";
+        text-align: center;
+        height: 100%;
+        .titulo-locales {
+            font-family: $fuente-titulos;
+            font-weight: 550;
+            font-size: 25px;
+            grid-area: titulo;
+            margin-bottom: 40px;
+            margin-top: 40px;
+            align-self: center;
+        }
+        .direccion-locales {
+            font-family: $fuente-textos;
+            font-size: 12px;
+            grid-area: direccion;
+            margin-bottom: 40px;
+            margin-top: 30px;
+            padding: 10px;
+            font-weight: 700;
+        }
+        .imagen-locales {
+            width: 100%;
+            grid-area: imagen;
+            justify-self: right;
+        }
+        .circulo-locales {
+            display: none;
+        }
+    }
+}
+
+/*Sección Menu*/
+
+.contenedor-menu {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    .frase-menu {
+        font-family: $fuente-titulos;
+        font-weight: 600;
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 20px;
+        background:$color-principal;
+        border-radius: 15px;
+        padding: 5px;
+    }
+    .enlace-pdf {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 40px;
+        .icono-carta {
+            height: 100px;
+         }
+    }
+}
+
+.contenedor-platos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .imagen-plato {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .titulo-plato {
+        font-family: $fuente-textos;
+        text-align: center;
+        font-size: 23px;
+        font-weight: bold;
+    }
+    .descripcion-plato {
+        font-family: $fuente-textos;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .icono-fussilli {
+        margin-bottom: 15px;
+    }
+}
+
+/*Sección Galeria*/
+
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin: 20px;
+    overflow: hidden;
+    .galeria-fotos {
+        width: 100%;
+    }
+    .galeria-fotos:hover {
+        filter: opacity(.5);
+    }
+}   
+
+/*Sección Contacto*/
+
+.contenedor-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: $color-principal;
+    text-align: center;
+    box-shadow: 0px 10px 10px -6px black;
+    .titulos-form {
+        font-family: $fuente-titulos;
+        font-weight: 600;
+    }
+    .input-escrito {
+        margin-bottom: 5px;
+        border: solid 1px $color-fondo;
+        border-radius: 15px;
+        text-align: center;
+        background-color: $color-fondo;
+    }
+    .icono-contacto {
+        height: 20px;
+        margin: 20px;
+    }
+    .opciones-contacto{
+        font-size: 10px;
+    }
+    .botones-contacto {
+        border-radius: 15px;
+        font-size: 12px;
+        padding: 5px;
+        border: solid 2px $color-fondo;
+        background-color: $color-fondo;
+    }
+    .botones-contacto:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        font-size: 10px;
+    }
+}
+
+/*Responsive*/
+
+@media only screen and (min-width: 576px) {
+    .menu-navegacion {
+        height: 120px;
+        margin: 3px;
+        .logo-img {
+            height: 115px;
+        }
+    }
+
+    .submenu-navegacion {
+        height: 150px;
+        .enlaces-nav {
+            font-size: 20px;
+        }
+        .slogan {
+            .titulo-home {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .contenedor-footer {
+        .enlaces-footer {
+            .links-footer{
+                font-size: 20px;
+            }
+        }
+        .cont-logo {
+            .logo-footer {
+                height: 120px;
+                justify-self: center;
+            }
+        }
+        .contenedor-iconosredes {
+            grid-gap: 20px;
+            .icono-redes {
+                height: 30px;
+                transition: transform 0.5s;
+            }
+        }
+    }
+
+    .cuerpo-home {
+        .titulo-slogan{
+            font-size: 30px;
+        }
+    }
+    .contenedor-carrusel {
+        .icono-pasta {
+            width: 500px;
+        }
+    }
+
+    .contenedor-recetas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .icono-pasta {
+            max-width: 500px;
+            margin: auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .contenedor-pasos {
+            margin-bottom: 0px;
+            .pasos-receta{
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    .contenedor-locales {
+        .locales-izquierda {
+            .titulo-locales {
+                font-weight: 750;
+                font-size: 50px;
+            }
+            .direccion-locales {
+                font-size: 15px;
+            }
+        }
+    }
+    
+    .contenedor-menu {
+        .frase-menu {
+            font-size: 30px;
+        }
+        .enlace-pdf {
+            .icono-carta {
+                height: 150px;
+             }
+        }
+    }
+
+    .contenedor-galeria {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contenedor-contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        max-width: 550px;
+        margin: auto;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .menu-navegacion {
+        height: 140px;
+        margin: 3px;
+        .logo-img {
+            height: 135px;
+        }
+    }
+    .cuerpo-home {
+        .titulo-slogan{
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        .texto-home {
+            font-size: 22px;
+        }
+    }
+
+    .contenedor-recetas {
+        display: grid;
+        justify-content: center;
+        max-width: 730px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-gap: 10px;
+        grid-template-areas: 
+        "titulo titulo"
+        "pomodoro carbonara"
+        "ravioli tiramisu"
+        ;
+        .icono-pasta {
+            display: none;
+        }
+        .titulo-slogan{
+            font-size: 40px;
+            font-weight: 500;
+            grid-area: titulo;
+        }
+        .receta-pomodoro {
+            grid-area: pomodoro;
+            margin-bottom: 30px;
+            .contenedor-pasos {
+                height: 500px;
+                padding-bottom: 20px;
+            }
+        }
+        .receta-carbonara {
+            grid-area: carbonara;
+            margin-bottom: 30px;
+            .contenedor-pasos {
+                height: 500px;
+                padding-bottom: 20px;
+            }
+        }
+        .receta-ravioli {
+            grid-area: ravioli;
+            .contenedor-pasos {
+                height: 500px;
+                padding-bottom: 20px;
+            }
+        }
+        .receta-tiramisu {
+            grid-area: tiramisu;
+            .contenedor-pasos {
+                height: 500px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .submenu-navegacion {
+        height: 250px;
+        .slogan {
+            .titulo-home {
+                font-size: 60px;
+            }
+        }
+    }
+    .cuerpo-home {
+        .titulo-slogan{
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        .texto-home {
+            font-size: 25px;
+        }
+    }
+    .contenedor-footer { 
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 400px;
+        .enlaces-footer {
+            .links-footer{
+                transition: transform 0.5s;
+            }
+            .links-footer:hover {
+                transform:scale(1.2);
+            }
+        }
+    }
+    .contenedor-nosotros {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        text-align: center;
+        grid-gap: 20px;
+        .fotos-historia {
+            display: grid;
+            align-content: center;
+            .imagen-nosotros {
+                width: 90%;
+                margin: 20px;
+                justify-self: center;
+                
+            }
+        }
+        .historia-texto {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            .icono-nosotros {
+                justify-self: center;
+            }
+            .texto-nosotros {
+                justify-self: center;
+            }
+            .titulo-nosotros {
+                justify-self: center;
+            }
+        }
+    }
+    .contenedor-locales {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 700px;
+        .locales-izquierda {
+            margin: auto;
+            margin-bottom: 35px;
+            margin-top: 35px;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            background-color:$color-principal-transparente;
+            grid-template-areas:
+            "titulo circulo"
+            "direccion circulo";
+            border-bottom-right-radius: 70%;
+            border-top-right-radius: 70%;
+            border-bottom-left-radius: 15%;
+            border-top-left-radius: 15%;
+            .titulo-locales {
+                font-family: $fuente-titulos;
+                font-weight: 750;
+                font-size: 35px;
+                grid-area: titulo;
+                margin-bottom: 5px;
+                margin-top: 5px;
+                align-self: center;
+            }
+            .direccion-locales {
+                font-family: $fuente-textos;
+                font-size: 17px;
+                grid-area: direccion;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                padding: 10px;
+                font-weight: 500;
+            }
+            .imagen-locales {
+                display: none;
+            }
+            .circulo-locales {
+                display: grid;
+                grid-area: circulo;
+                justify-self: right;
+                width: 450px;
+                height: 450px;
+                overflow: hidden;
+                border-radius: 50%;
+                .imagen-circulo {
+                    max-width: 700px;
+                    justify-self: center;
+                }
+            }
+        }
+    }
+    .contenedor-platos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        max-width: 850px;
+        margin-bottom: 80px;
+        .imagen-plato {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 15px;
+        }
+        .titulo-plato {
+            font-family: $fuente-textos;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+        .descripcion-plato {
+            font-family: $fuente-textos;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .icono-fussilli {
+            margin-bottom: 15px;
+        }
+    }
+    .contenedor-galeria {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        margin: 20px;
+        margin-top: 50px;
+        overflow: hidden;
+        .galeria-fotos {
+            width: 100%;
+        }
+        .galeria-fotos:hover {
+            filter: opacity(.5);
+        }
+    }   
+}

@@ -1,0 +1,995 @@
+@charset "UTF-8";
+@font-face {
+  font-family: wildyarial;
+  src: url("../Fuentes/Wildy_SansFB.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #E7E3D8 !important;
+}
+
+/*Variables*/
+/*Estilos Header*/
+.menu-navegacion {
+  background-color: #E7E3D8;
+  font-family: wildyarial, Arial;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  margin: 3px;
+}
+
+.menu-navegacion .logo-img {
+  height: 55px;
+}
+
+.submenu-navegacion {
+  height: 120px;
+  background-image: url("../Fotos/condiments-prepare-italian-pasta.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.submenu-navegacion .enlaces-nav {
+  font-family: wildyarial, Arial;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.submenu-navegacion .enlaces-nav .links-head {
+  color: #E7E3D8;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+
+.submenu-navegacion .enlaces-nav .links-head:hover {
+  background: #f2cc7d;
+  color: black;
+}
+
+.submenu-navegacion .slogan {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.submenu-navegacion .slogan .titulo-home {
+  color: #E7E3D8;
+  font-family: wildyarial, Arial;
+  font-weight: 200;
+  text-align: center;
+  font-size: 40px;
+}
+
+/*Estilos footer*/
+.contenedor-footer {
+  height: 300px;
+  background-image: url(../Fotos/pasta-footer.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 100px;
+  padding-top: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "enlaces-footer logo-footer redes-footer" "derechos-footer derechos-footer derechos-footer";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.contenedor-footer .enlaces-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: enlaces-footer;
+}
+
+.contenedor-footer .enlaces-footer .links-footer {
+  color: #E7E3D8;
+  text-decoration: none;
+  font-family: wildyarial, Arial;
+  font-size: 15px;
+}
+
+.contenedor-footer .enlaces-footer .links-footer:hover {
+  color: #f2cc7d;
+}
+
+.contenedor-footer .cont-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: logo-footer;
+}
+
+.contenedor-footer .cont-logo .logo-footer {
+  height: 70px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.contenedor-footer .contenedor-iconosredes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 22px 22px;
+      grid-template-columns: 22px 22px;
+  -ms-grid-rows: 22px 22px 22px;
+      grid-template-rows: 22px 22px 22px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  grid-gap: 10px;
+}
+
+.contenedor-footer .contenedor-iconosredes .icono-redes {
+  height: 20px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.contenedor-footer .contenedor-iconosredes .icono-redes:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.contenedor-footer .derechos-benvenuti {
+  width: 100%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: derechos-footer;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  color: #E7E3D8;
+  font-size: 10px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+/*Sección Home*/
+.cuerpo-home {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cuerpo-home .titulo-slogan {
+  height: auto;
+  background: #f2cc7d;
+  border-radius: 15px;
+  color: black;
+  font-family: wildyarial, Arial;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.cuerpo-home .texto-home {
+  text-align: center;
+  font-family: "Zen Kurenaido", Arial;
+  margin-bottom: 0px;
+}
+
+.contenedor-carrusel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+}
+
+.contenedor-carrusel .icono-pasta {
+  width: 100%;
+  padding: 20px;
+}
+
+.contenedor-recetas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+}
+
+.contenedor-recetas .icono-pasta {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.contenedor-recetas .titulo-slogan {
+  height: auto;
+  background: #f2cc7d;
+  border-radius: 15px;
+  color: black;
+  font-family: wildyarial, Arial;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contenedor-recetas .receta-pomodoro, .contenedor-recetas .receta-carbonara, .contenedor-recetas .receta-ravioli, .contenedor-recetas .receta-tiramisu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  color: black;
+  font-family: "Zen Kurenaido", Arial;
+}
+
+.contenedor-recetas .receta-pomodoro .contenedor-detalle, .contenedor-recetas .receta-carbonara .contenedor-detalle, .contenedor-recetas .receta-ravioli .contenedor-detalle, .contenedor-recetas .receta-tiramisu .contenedor-detalle {
+  width: 100%;
+  background: #CECABE;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contenedor-recetas .receta-pomodoro .contenedor-detalle .titulo-receta, .contenedor-recetas .receta-carbonara .contenedor-detalle .titulo-receta, .contenedor-recetas .receta-ravioli .contenedor-detalle .titulo-receta, .contenedor-recetas .receta-tiramisu .contenedor-detalle .titulo-receta {
+  font-family: wildyarial, Arial;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.contenedor-recetas .receta-pomodoro .contenedor-detalle .punto-detalle, .contenedor-recetas .receta-carbonara .contenedor-detalle .punto-detalle, .contenedor-recetas .receta-ravioli .contenedor-detalle .punto-detalle, .contenedor-recetas .receta-tiramisu .contenedor-detalle .punto-detalle {
+  margin-bottom: 0px;
+}
+
+.contenedor-recetas .contenedor-pasos {
+  width: 100%;
+  background: #CECABE;
+  border-radius: 15px;
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+.contenedor-recetas .contenedor-pasos .titulo-pasos {
+  font-family: wildyarial, Arial;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.contenedor-recetas .contenedor-pasos .pasos-receta {
+  padding-bottom: 10px;
+}
+
+/*Sección Nosotros*/
+.contenedor-nosotros {
+  background-image: url(../Fotos/food-with-ingredients.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #E7E3D8;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.contenedor-nosotros .fotos-historia {
+  display: none;
+}
+
+.contenedor-nosotros .historia-texto .titulo-nosotros {
+  font-family: wildyarial, Arial;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.contenedor-nosotros .historia-texto .icono-nosotros {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 16px;
+}
+
+.contenedor-nosotros .historia-texto .texto-nosotros {
+  font-family: "Zen Kurenaido", Arial;
+  font-size: 15px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+}
+
+/*Sección Locales*/
+.contenedor-locales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+}
+
+.contenedor-locales .locales-izquierda {
+  margin-bottom: 20px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #f2cc7d;
+      grid-template-areas: "titulo direccion" "imagen imagen";
+  text-align: center;
+  height: 100%;
+}
+
+.contenedor-locales .locales-izquierda .titulo-locales {
+  font-family: wildyarial, Arial;
+  font-weight: 550;
+  font-size: 25px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.contenedor-locales .locales-izquierda .direccion-locales {
+  font-family: "Zen Kurenaido", Arial;
+  font-size: 12px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: direccion;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.contenedor-locales .locales-izquierda .imagen-locales {
+  width: 100%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: imagen;
+  -ms-grid-column-align: right;
+      justify-self: right;
+}
+
+.contenedor-locales .locales-izquierda .circulo-locales {
+  display: none;
+}
+
+/*Sección Menu*/
+.contenedor-menu {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contenedor-menu .frase-menu {
+  font-family: wildyarial, Arial;
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  background: #f2cc7d;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.contenedor-menu .enlace-pdf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+.contenedor-menu .enlace-pdf .icono-carta {
+  height: 100px;
+}
+
+.contenedor-platos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-platos .imagen-plato {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contenedor-platos .titulo-plato {
+  font-family: "Zen Kurenaido", Arial;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.contenedor-platos .descripcion-plato {
+  font-family: "Zen Kurenaido", Arial;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.contenedor-platos .icono-fussilli {
+  margin-bottom: 15px;
+}
+
+/*Sección Galeria*/
+.contenedor-galeria {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 10px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.contenedor-galeria .galeria-fotos {
+  width: 100%;
+}
+
+.contenedor-galeria .galeria-fotos:hover {
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
+}
+
+/*Sección Contacto*/
+.contenedor-contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: #f2cc7d;
+  text-align: center;
+  -webkit-box-shadow: 0px 10px 10px -6px black;
+          box-shadow: 0px 10px 10px -6px black;
+}
+
+.contenedor-contacto .titulos-form {
+  font-family: wildyarial, Arial;
+  font-weight: 600;
+}
+
+.contenedor-contacto .input-escrito {
+  margin-bottom: 5px;
+  border: solid 1px #E7E3D8;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #E7E3D8;
+}
+
+.contenedor-contacto .icono-contacto {
+  height: 20px;
+  margin: 20px;
+}
+
+.contenedor-contacto .opciones-contacto {
+  font-size: 10px;
+}
+
+.contenedor-contacto .botones-contacto {
+  border-radius: 15px;
+  font-size: 12px;
+  padding: 5px;
+  border: solid 2px #E7E3D8;
+  background-color: #E7E3D8;
+}
+
+.contenedor-contacto .botones-contacto:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 10px;
+}
+
+/*Responsive*/
+@media only screen and (min-width: 576px) {
+  .menu-navegacion {
+    height: 120px;
+    margin: 3px;
+  }
+  .menu-navegacion .logo-img {
+    height: 115px;
+  }
+  .submenu-navegacion {
+    height: 150px;
+  }
+  .submenu-navegacion .enlaces-nav {
+    font-size: 20px;
+  }
+  .submenu-navegacion .slogan .titulo-home {
+    font-size: 50px;
+  }
+  .contenedor-footer .enlaces-footer .links-footer {
+    font-size: 20px;
+  }
+  .contenedor-footer .cont-logo .logo-footer {
+    height: 120px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .contenedor-footer .contenedor-iconosredes {
+    grid-gap: 20px;
+  }
+  .contenedor-footer .contenedor-iconosredes .icono-redes {
+    height: 30px;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  .cuerpo-home .titulo-slogan {
+    font-size: 30px;
+  }
+  .contenedor-carrusel .icono-pasta {
+    width: 500px;
+  }
+  .contenedor-recetas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contenedor-recetas .icono-pasta {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .contenedor-recetas .contenedor-pasos {
+    margin-bottom: 0px;
+  }
+  .contenedor-recetas .contenedor-pasos .pasos-receta {
+    padding-bottom: 10px;
+  }
+  .contenedor-locales .locales-izquierda .titulo-locales {
+    font-weight: 750;
+    font-size: 50px;
+  }
+  .contenedor-locales .locales-izquierda .direccion-locales {
+    font-size: 15px;
+  }
+  .contenedor-menu .frase-menu {
+    font-size: 30px;
+  }
+  .contenedor-menu .enlace-pdf .icono-carta {
+    height: 150px;
+  }
+  .contenedor-galeria {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .contenedor-contacto {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 550px;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-navegacion {
+    height: 140px;
+    margin: 3px;
+  }
+  .menu-navegacion .logo-img {
+    height: 135px;
+  }
+  .cuerpo-home .titulo-slogan {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  .cuerpo-home .texto-home {
+    font-size: 22px;
+  }
+  .contenedor-recetas {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-gap: 10px;
+        grid-template-areas: "titulo titulo" "pomodoro carbonara" "ravioli tiramisu";
+  }
+  .contenedor-recetas .icono-pasta {
+    display: none;
+  }
+  .contenedor-recetas .titulo-slogan {
+    font-size: 40px;
+    font-weight: 500;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: titulo;
+  }
+  .contenedor-recetas .receta-pomodoro {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: pomodoro;
+    margin-bottom: 30px;
+  }
+  .contenedor-recetas .receta-pomodoro .contenedor-pasos {
+    height: 500px;
+    padding-bottom: 20px;
+  }
+  .contenedor-recetas .receta-carbonara {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: carbonara;
+    margin-bottom: 30px;
+  }
+  .contenedor-recetas .receta-carbonara .contenedor-pasos {
+    height: 500px;
+    padding-bottom: 20px;
+  }
+  .contenedor-recetas .receta-ravioli {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: ravioli;
+  }
+  .contenedor-recetas .receta-ravioli .contenedor-pasos {
+    height: 500px;
+    padding-bottom: 20px;
+  }
+  .contenedor-recetas .receta-tiramisu {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: tiramisu;
+  }
+  .contenedor-recetas .receta-tiramisu .contenedor-pasos {
+    height: 500px;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .submenu-navegacion {
+    height: 250px;
+  }
+  .submenu-navegacion .slogan .titulo-home {
+    font-size: 60px;
+  }
+  .cuerpo-home .titulo-slogan {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  .cuerpo-home .texto-home {
+    font-size: 25px;
+  }
+  .contenedor-footer {
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 400px;
+  }
+  .contenedor-footer .enlaces-footer .links-footer {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  .contenedor-footer .enlaces-footer .links-footer:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .contenedor-nosotros {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    grid-gap: 20px;
+  }
+  .contenedor-nosotros .fotos-historia {
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .contenedor-nosotros .fotos-historia .imagen-nosotros {
+    width: 90%;
+    margin: 20px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .contenedor-nosotros .historia-texto {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .contenedor-nosotros .historia-texto .icono-nosotros {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .contenedor-nosotros .historia-texto .texto-nosotros {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .contenedor-nosotros .historia-texto .titulo-nosotros {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .contenedor-locales {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    max-width: 700px;
+  }
+  .contenedor-locales .locales-izquierda {
+    margin: auto;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    background-color: rgba(242, 204, 125, 0.5);
+        grid-template-areas: "titulo circulo" "direccion circulo";
+    border-bottom-right-radius: 70%;
+    border-top-right-radius: 70%;
+    border-bottom-left-radius: 15%;
+    border-top-left-radius: 15%;
+  }
+  .contenedor-locales .locales-izquierda .titulo-locales {
+    font-family: wildyarial, Arial;
+    font-weight: 750;
+    font-size: 35px;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: titulo;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .contenedor-locales .locales-izquierda .direccion-locales {
+    font-family: "Zen Kurenaido", Arial;
+    font-size: 17px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: direccion;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 10px;
+    font-weight: 500;
+  }
+  .contenedor-locales .locales-izquierda .imagen-locales {
+    display: none;
+  }
+  .contenedor-locales .locales-izquierda .circulo-locales {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: circulo;
+    -ms-grid-column-align: right;
+        justify-self: right;
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .contenedor-locales .locales-izquierda .circulo-locales .imagen-circulo {
+    max-width: 700px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .contenedor-platos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+    max-width: 850px;
+    margin-bottom: 80px;
+  }
+  .contenedor-platos .imagen-plato {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 15px;
+  }
+  .contenedor-platos .titulo-plato {
+    font-family: "Zen Kurenaido", Arial;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .contenedor-platos .descripcion-plato {
+    font-family: "Zen Kurenaido", Arial;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .contenedor-platos .icono-fussilli {
+    margin-bottom: 15px;
+  }
+  .contenedor-galeria {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 20px;
+    margin-top: 50px;
+    overflow: hidden;
+  }
+  .contenedor-galeria .galeria-fotos {
+    width: 100%;
+  }
+  .contenedor-galeria .galeria-fotos:hover {
+    -webkit-filter: opacity(0.5);
+            filter: opacity(0.5);
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
